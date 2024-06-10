@@ -17,17 +17,14 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// Initialize Firebase
-
 const db = getFirestore(app);
 
-//función para listar todos los registros
 export const getData = (data) => {
     
     onSnapshot(collection(db, 'IGN'), data)
 }
 
-//función eliminar 
+
 export const eliminar = (id) =>{
    
     deleteDoc(doc(db,'IGN',id))
