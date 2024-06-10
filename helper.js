@@ -9,14 +9,6 @@ const verificar = (id) => {
     else {
         input.classList.add('is-valid')
         div.innerHTML = ''
-        if (id == 'nota') {
-            if (input.value > 10) {
-                input.classList.add('is-invalid')
-                div.innerHTML = '<span class="badge bg-danger">No se pueden ingresar notas mayores a 10</span>'
-
-            }
-        }
-        
         if (id == 'run') {
             if (!validarRun(input.value.trim())) {
                 input.classList.add('is-invalid')
